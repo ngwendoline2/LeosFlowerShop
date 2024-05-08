@@ -1,0 +1,15 @@
+{
+  "name": "leosflowershop",
+  "version": "1.0.0",
+  "description": "LeosFlowerShop/\r │\r ├───backend/\r │   ├───config/         # Database and other configurations\r │   ├───controllers/    # Route controllers\r │   ├───models/         # Database models\r │   ├───routes/         # Express routes\r │   └───utils/          # Utility functions like auth\r │\r ├───frontend/\r │   ├───public/\r │   ├───src/\r │   │   ├───components/ # Reusable React components\r │   │   ├───pages/      # React components for pages\r │   │   ├───hooks/      # Custom React hooks\r │   │   ├───App.js      # Main React application file\r │   │   └───index.js    # Entry point for React\r │   └───styles/         # CSS files\r │\r └───README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

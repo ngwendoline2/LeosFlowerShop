@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 import { listProducts, getAllProducts, getProductById, createProduct, updateProduct, deleteProduct } from '../controllers/productController.js';
 
-// List all products
+// // List all products
 router.get('/', listProducts);
 
 // Get a single product by ID

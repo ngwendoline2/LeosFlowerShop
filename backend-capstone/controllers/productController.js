@@ -3,7 +3,7 @@ import Product from '../models/Product.js';
 // GET all products
 export const getAllProducts = async (req, res) => {
     try {
-        const products = await Product.find();
+        const products = await Product.findById();
         res.json(products);
     } catch (error) {
         res.status(500).send(error.message);

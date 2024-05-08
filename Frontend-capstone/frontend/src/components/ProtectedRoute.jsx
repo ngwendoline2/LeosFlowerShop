@@ -1,15 +1,21 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
-const ProtectedRoute = ({ component: Component, ...rest }) => {
-    const { isAuthenticated, loading } = useAuth();
+function ProtectedRoute({ component: Component, ...rest }) {
+    const isAuthenticated = true; // Implement your authentication logic here
 
     return (
-        <Route {...rest} render={props => {
-            if (loading) return <div>Loading...</div>;
-            if (!isAuthenticated) return <Redirect to="/login" />;
-            return <Component {...props} />;
-        }} />
+        <Route
+            {...rest}
+            render={(props) =>
+                isAuthenticated ? (
+                    <Component {...props} />
+                ) : (
+                    <Redirect to={{ pathname: "/login", state: { from: props.location } }} />
+                )
+            }
+        />
     );
-};
+}
+
+export default ProtectedRoute;
