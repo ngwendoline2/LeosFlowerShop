@@ -1,4 +1,4 @@
-LeosFlowerShop/
+LeosFlowerShop/Structure
 │
 ├───backend/
 │   ├───config/         # Database and other configurations
