@@ -3,7 +3,7 @@ import Product from '../models/Product.js';
 // GET all products
 export const getAllProducts = async (req, res) => {
     try {
-        const products = await Product.findById();
+        const products = await Product.findByIdAndUpdate();
         res.json(products);
     } catch (error) {
         res.status(500).send(error.message);
@@ -13,11 +13,11 @@ export const getAllProducts = async (req, res) => {
 // GET one product by ID
 export const getProductById = async (req, res) => {
     try {
-        const product = await Product.findById(req.params.id);
-        if (!product) {
+        const Product = await Product.findByIdAndUpdate(req.params.id);
+        if (!Product) {
             return res.status(404).send('Product not found');
         }
-        res.json(product);
+        res.json(Product);
     } catch (error) {
         res.status(500).send(error.message);
     }
@@ -47,7 +47,7 @@ export const updateProduct = async (req, res) => {
 // DELETE a product
 export const deleteProduct = async (req, res) => {
     try {
-        await Product.findByIdAndDelete(req.params.id);
+        const Product = await Product.findByIdAndDelete(req.params.id);
         res.json({ message: 'Product deleted' });
     } catch (error) {
         res.status(500).send(error.message);
@@ -55,11 +55,11 @@ export const deleteProduct = async (req, res) => {
 };
 
 // List a product
-export const listProducts = async (req, res) => {
-    try {
-        await Product.find({});
-        res.json({ message: 'Product list' });
-    } catch (error) {
-        res.status(500).send(error.message);
-    }
-};
+// export const listProducts = async (req, res) => {
+//     try {
+//         await Product.find({});
+//         res.json({ message: 'Product list' });
+//     } catch (error) {
+//         res.status(500).send(error.message);
+//     }
+// };

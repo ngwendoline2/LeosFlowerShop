@@ -1,3 +1,28 @@
+LeosFlowerShop Structure
+│
+├───backend/
+│   ├───config/         # Database and other configurations
+│   ├───controllers/    # Route controllers
+│   ├───models/         # Database models
+│   ├───routes/         # Express routes
+│   └───utils/          # Utility functions like auth
+│
+├───frontend/
+│   ├───public/
+│   ├───src/
+│   │   ├───components/ # Reusable React components
+│   │   ├───pages/      # React components for pages
+│   │   ├───hooks/      # Custom React hooks
+│   │   ├───App.js      # Main React application file
+│   │   └───index.js    # Entry point for React
+│   └───styles/         # CSS files
+│
+└───README.md
+
+
+
+
+
 Welcome to the official repository for "LeosFlowerShop," a sophisticated and elegant in store and online destination catering to all your event floristry needs. Powered by Next.js, this website is a digital showcase of our exquisite floral arrangements and designs, each uniquely crafted to add elegance to your special day.
 
 About LeosFlowerStore
@@ -43,4 +68,4 @@ Deployment and Updates
 
 Thank you for your interest in "LeosFlowerStore." For the latest updates and more about our services, visit LeosFlowerStore.
 
-Coded & Designed by Nate Wright
+Coded & Designed by Ng Leo

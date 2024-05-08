@@ -1,19 +1,16 @@
+// src/pages/HomePage.jsx, the main landing page of my website
 import React from 'react';
-import ImageCard from '../components/ImageCard';
+import ProductCard from '../components/ProductCard';
 
-const HomePage = () => {
-    const images = [
-        { title: 'Beautiful Tulips', imageUrl: 'https://source.unsplash.com/featured/?tulips' },
-        { title: 'Stylish Sneakers', imageUrl: 'https://source.unsplash.com/featured/?sneakers' },
-        { title: 'Elegant Jewelry', imageUrl: 'https://source.unsplash.com/featured/?jewelry' },
-        { title: 'Fashionable Purses', imageUrl: 'https://source.unsplash.com/featured/?purse' },
-    ];
-
+const HomePage = ({ products, onAddToCart }) => {
     return (
         <div>
-            {images.map((img, index) => (
-                <ImageCard key={index} imageUrl={img.imageUrl} title={img.title} />
-            ))}
+            <h1>Welcome to Leo's Flower Shop</h1>
+            <div className="product-list">
+                {products.map(product => (
+                    <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
+                ))}
+            </div>
         </div>
     );
 };

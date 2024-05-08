@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Nav from './Nav';
 import { AuthProvider } from './context/AuthContext';
 import HomePage from './pages/HomePage';
 import LoginForm from './components/LoginForm.jsx';
 import ProtectedRoute from './src/components/ProtectedRoute';
 import VisitingPage from './VisitingPage';
 import AppreciationPage from './AppreciationPage';
+import ImageCart from './ImageCard'
+
 
 const App = () => {
     return (
